@@ -1,0 +1,16 @@
+.caja{ /* Por clase */
+    background-color: #585a999c;
+    color: white;
+    margin: 10px auto;
+    padding: 3%;
+    font-size: 3em;
+    border: solid 7px #dbcccc;
+}
+
+.centrado{
+    text-align: center;
+}
+
+#negrita{ /* Por id */
+    font-weight: bold;
+}

@@ -1,0 +1,36 @@
+table {
+    width: 20%;
+    margin: 10px auto;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+th {
+    width: 35%;
+    padding: 5px;
+    background-color: #5eb0f7;
+    color: white;
+}
+
+th:hover {
+    background-color: #5eb0f78a;
+    color: white;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+td:hover {
+    background-color: #5eb0f78a;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
