@@ -3,22 +3,7 @@
         $media = ($num1 + $num2 + $num3) / 3;
         $letra = "";
 
-        if($media >= 90){
-            $letra = "A";
-        }
-        else if ($media >= 80) {
-            $letra = "B";
-        }
-        else if ($media >= 70) {
-            $letra = "C";
-        }
-        else if ($media >= 60) {
-            $letra = "D";
-        }
-        else {
-            $letra = "F";
-        }
-
+        $letra = ($media >= 90) ? "A" : (($media >= 80) ? "B" : (($media >= 70) ? "C" : (($media >= 60) ? "D" : "F")));
 
         return $letra;
     }

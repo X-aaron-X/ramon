@@ -1,13 +1,8 @@
 <?php
     function solutions(string $a, array $x): string {
-        $salida = ""; 
+        $salida = "";
 
-        if (in_array($a, $x) === true) {
-            $salida = "true";
-        }
-        else {
-            $salida = "false";
-        }
+        $salida = in_array($a, $x) ? "True" : "False";
 
         return $salida;
     }
