@@ -40,6 +40,11 @@ button:hover{
     background-color: #1b63818f;
 }
 
+label:hover::after {
+    content: " - Ten cuidado con los formatos";
+    color: blue;
+}
+
 .error{
     display: none;
     height: 45px;
