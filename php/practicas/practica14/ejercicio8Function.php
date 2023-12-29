@@ -1,25 +1,30 @@
 <?php
     /**
-     * Genera un array con un mensaje y un código basado en dos fechas de entrada.
+     * Una función que recibe dos cadenas que representan fechas y devuelve un array
+     * que contiene un mensaje y un texto basado en la validez de las fechas.
      *
-     * @param string $fechaInicio La fecha de inicio.
-     * @param string $fechaFin La fecha de fin.
-     * @return array El array que contiene el mensaje y el código.
+     * @param string $fechaInicio La fecha de inicio en el formato 'YYYY-MM-DD'
+     * @param string $fechaFin La fecha de fin en el formato 'YYYY-MM-DD'
+     * @return array Un array que contiene un mensaje y un texto basado en la validez de las fechas
      */
-    function mostrar_resultados($fechaInicio, $fechaFin): array {
+    function mostrar_resultados(string $fechaInicio, string $fechaFin): array {
         $salida = [];
-        $texto = '';
-        $mensaje = '';
 
-        if (strtotime($fechaInicio) < strtotime($fechaFin)) {
-            $texto = '2';
-            $mensaje = "correcto";
+        if (strlen($fechaInicio) == 10 && strlen($fechaFin) == 10) {
+            if (strtotime($fechaInicio) < strtotime($fechaFin)) {
+                $texto = '2';
+                $mensaje = "correcto";
+            }
+            else {
+                $texto = 'La fecha de fin debe ser mayor que la de inicio';
+                $mensaje = "error";
+            }    
         }
         else {
-            $texto = 'La fecha de fin debe ser mayor que la de inicio';
+            $texto = 'La fecha tiene no tiene el formato correcto';
             $mensaje = "error";
         }
-
+        
         $salida = [$mensaje, $texto];
 
         return $salida;

@@ -11,9 +11,12 @@
 </head>
 <body>
     <?php
+        $fechaInicio = "";
+        $fechaFin = "";
+
         if (isset($_REQUEST['button'])) {
-            $fechaInicio = $_REQUEST['fechaInicio'];
-            $fechaFin = $_REQUEST['fechaFin'];
+            $fechaInicio = $_REQUEST['fechaInicio'] ?: "";
+            $fechaFin = $_REQUEST['fechaFin'] ?: "";
 
             $calcularFecha = mostrar_resultados($fechaInicio, $fechaFin);
 
@@ -24,13 +27,13 @@
     <form method="post" action="ejercicio8.php">
         <div>
             <label for="fechaInicio">Fecha de Inicio</label><br>
-            <input type="date" name="fechaInicio">
+            <input type="date" name="fechaInicio" value="<?= $fechaInicio ?>">
             <span class="error"></span>
         </div><br>
 
         <div>
             <label for="fechaFin">Fecha de Fin</label><br>
-            <input type="date" name="fechaFin">
+            <input type="date" name="fechaFin" value="<?= $fechaFin ?>">
             <span class="error"></span>
         </div><br>
 
