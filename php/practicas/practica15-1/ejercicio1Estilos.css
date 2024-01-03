@@ -1,0 +1,44 @@
+ul li {
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.ronda {
+    width: 15%;
+    height: 30px;
+    background-color: #8080803b;
+    font-size: larger;
+    font-family: cursive;
+    padding: 5px 0px 5px 30px;
+    border-radius: 7px;
+}
+
+.ronda:hover {
+    background-color: #8080802e;
+}
+
+.partidos{
+    flex-direction: row;
+    padding: 15px;
+    margin-top: -20px;
+    width: 35%;
+    margin-left: 1%;
+    background-color: #f1ebeb;
+}
+
+.partidos:hover {
+    background-color: #8080802e;
+}
+
+.partidos li {
+    width: 40%;
+    font-size: x-large;
+    padding-left: 40px;
+}
