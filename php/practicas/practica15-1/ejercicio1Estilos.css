@@ -1,44 +1,66 @@
-ul li {
-    list-style-type: none;
+ul {
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
+    list-style: none;
 }
 
-ul {
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    flex-direction: column;
-    margin-top: 40px;
+.principal  {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
+
+.header {
+    box-shadow: 3px 0px 4px rgb(0 0 0 / 12%);
+    cursor: pointer;
+    border: 1px solid #c4b0b04a;
+    border-radius: 10px;
+}
+
+.header:hover {
+    background-color: #f5f5f5;
+}
+
 
 .ronda {
-    width: 15%;
-    height: 30px;
-    background-color: #8080803b;
+    background-color: #ffffffff;
+    padding: 25px 0px 25px 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     font-size: larger;
-    font-family: cursive;
-    padding: 5px 0px 5px 30px;
-    border-radius: 7px;
+    font-weight: 600;
 }
 
 .ronda:hover {
-    background-color: #8080802e;
+    background-color: #f9f7f7;
 }
 
-.partidos{
-    flex-direction: row;
+.body {
+    background-color: #ffffffff;
+    border-top: 1px solid #6c6c6c3d;
+}
+
+.partidos {
+    display: flex;
+    margin-top: auto;
+}
+
+.indice {
+    border-right: 1px solid #6c6c6c3d;
+    width: 50%;
     padding: 15px;
-    margin-top: -20px;
-    width: 35%;
-    margin-left: 1%;
-    background-color: #f1ebeb;
 }
 
-.partidos:hover {
-    background-color: #8080802e;
+.indice:hover {
+    background-color: #f9f7f7;
 }
 
-.partidos li {
-    width: 40%;
-    font-size: x-large;
-    padding-left: 40px;
+.valor {
+    padding: 15px;
+    width: 50%;
+}
+
+.valor:hover {
+    background-color: #f9f7f7;
 }

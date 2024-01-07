@@ -15,23 +15,25 @@
         $resultado = phpGames($secuencia);
         
         foreach ($resultado as $rondas => $valores) {
-            echo "<ul>";
-            echo "<li class='ronda'>$rondas</li>";
+            echo "<ul class='principal'>
+                    <div class='header'>
+                        <li class='ronda'>{$rondas}</li>";
+                            array_walk($valores, function ($valor, $indice) {
+                                echo "<div class='body'>
+                                        <ul class='partidos'>
+                                            <li class='indice'><b>{$indice}</b></li>";
 
-            array_walk($valores, function ($valor, $indice) {
-                echo "<ul class='partidos'>";
-                    echo "<li>$indice</li>";
+                                            if ($indice == "Ganador") {
+                                                $valor == null ? $valor = "No hay ganador" : $valor;
+                                            }
 
-                    if ($indice == "Ganador") {
-                        $valor == null ? $valor = "No hay ganador" : $valor;
-                    }
-
-                    echo "<li>$valor</li>";
-                echo "</ul>";
-            });
-
+                                            echo "<li class='valor'>{$valor}</li>
+                                        </ul>
+                                    </div>";
+                            });
             echo "</ul>";
         }
     ?>
+    <script src="ejercicio1JavaScript.js"></script>
 </body>
 </html>
