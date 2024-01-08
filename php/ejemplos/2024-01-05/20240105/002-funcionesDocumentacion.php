@@ -14,8 +14,7 @@
  * @return string La etiqueta HTML con el contenido envuelto.
  */
 
-function crearEtiqueta(string $etiqueta, string $contenido): string
-{
+function crearEtiqueta(string $etiqueta, string $contenido): string {
     return "<{$etiqueta}>{$contenido}</{$etiqueta}>";
 }
 
