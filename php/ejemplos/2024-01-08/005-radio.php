@@ -4,6 +4,8 @@
     if ($_POST) {
         //Mostrar los datos enviados
         var_dump($_POST);
+
+        $resultado = $_POST['color'] ?: '';
     }
 ?>
 <!DOCTYPE html>
@@ -23,5 +25,7 @@
         <label for="verde">Verde</label>
         <button>Enviar</button>
     </form>
+
+    <p>Colores seleccionados: <?= $resultado; ?></p>
 </body>
 </html>

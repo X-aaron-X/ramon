@@ -27,6 +27,6 @@
         <button>Enviar</button>
     </form>
 
-    <p>Colores seleccionados: <?php echo $resultado; ?></p>
+    <p>Colores seleccionados: <?= $resultado; ?></p>
 </body>
 </html>
