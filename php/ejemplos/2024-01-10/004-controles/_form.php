@@ -23,7 +23,7 @@
             <label for="numeros" class="form-label">Numeros</label>
         </div>
         <div class="col-11">
-            <input type="text" class="form-control" id="numeros" placeholder="Introduce varios numeros por ';'" name="numeros" required>
+            <input type="text" class="form-control" id="numeros" placeholder="Introduce varios numeros separados por ';'" name="numeros" required>
         </div>
     </div>
 
