@@ -1,0 +1,38 @@
+.caja-frutas>span {
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.caja-frutas>:nth-child(1) img {
+    animation: spinReel 1s 1 ease-in-out;
+    animation-direction: normal;
+}
+
+.caja-frutas>:nth-child(2) img {
+    animation: spinReel 1.2s 1 ease-in-out;
+    animation-direction: normal;
+}
+
+.caja-frutas>:nth-child(3) img {
+    animation: spinReel 1.7s 1 ease-in-out;
+    animation-direction: normal;
+}
+
+@keyframes spinReel {
+
+    0% {
+        transform: translateY(100%);
+    }
+
+    50% {
+        transform: translateY(50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.caja-frutas {
+    overflow: hidden;
+}

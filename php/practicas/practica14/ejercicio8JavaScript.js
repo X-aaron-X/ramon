@@ -4,6 +4,9 @@ document.querySelector("button").addEventListener("click", boton => {
             boton.preventDefault();
 
             let campo = inputDate.previousElementSibling.previousElementSibling.innerHTML;
+
+            
+
             
             inputDate.style.border = "2px solid red";
             inputDate.nextElementSibling.style.display = "flex";
