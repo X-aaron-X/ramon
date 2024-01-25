@@ -33,7 +33,7 @@
         }
 
         if ($_SESSION['aciertos'] == count($_SESSION["numeros"])) {
-            //session_unset();
+            session_destroy();
 
             $_SESSION["numeros"] = $_SESSION["numeros"] ?? crearNumerosAleatorios(1, 50);
             $_SESSION["dibujoArray"] = $_SESSION["dibujoArray"] ?? array_fill(0, count($_SESSION["numeros"]), '-');
