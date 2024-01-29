@@ -5,7 +5,7 @@
 
     //Voy a utlizar los espacion de nombres para poder tener la misma clase en varias carpetas y asi poder organizar mis clases
     $numeros1 = new clases\profesor\Numeros([1,1,2,2]);
-    $numeros2 = new clases\aaron\Numeros([4,3,2,1]);
+    $numeros2 = new clases\aaron\Numeros([4,3,2,1,5]);
 
     var_dump($numeros1, $numeros2);
     

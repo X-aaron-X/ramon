@@ -66,13 +66,16 @@
             $mediana = 0;
             
             sort($this->numeros);
-            $count = count($this->numeros);
-            $middle = floor($count / 2);
-            if ($count % 2 === 0) {
-                $mediana = ($this->numeros[$middle - 1] + $this->numeros[$middle]) / 2;
-            } else {
-                $mediana = $this->numeros[$middle];
+
+            $numMedio = floor(count($this->numeros) / 2);
+
+            if (count($this->numeros) % 2 == 0) {
+                $mediana = ($this->numeros[$numMedio - 1] + $this->numeros[$numMedio]) / 2;
             }
+            else {
+                $mediana = $this->numeros[$numMedio];
+            }
+            
             return $mediana;
         }
     }
