@@ -1,25 +1,33 @@
 <?php
-    use clases\animales\Vaca;
-    use clases\animales\Perro;
-    use clases\animales\Animal;
+    use clases\herencia\Animal;
+    use clases\herencia\Perro;
+    use clases\herencia\Vaca;
+    use clases\herencia\Persona;
 
-    require_once "autoload.php";
+    require_once 'autoload.php';
 
-    $vaca = new Vaca('Lechera');
-
-    var_dump($vaca);
-
-    echo "<hr>";
-
-    $perro = new Perro();
-    $perro2 = new Perro('Firulais');
-
-    var_dump($perro, $perro2);
+    $vaca1 = new Vaca("Lechera");
+    var_dump($vaca1);
 
     echo "<hr>";
+
+    $perro1 = new Perro();
+
+    $perro2 = new Perro("Firulais");
 
     $animal = new Animal();
 
-    var_dump($animal);
+    $persona1 = new Persona("Javier", "Calle 1", "123456789");
 
+    var_dump($perro1, $perro2, $animal, $persona1);
 
+    echo "<hr>";
+
+    //Llama al metodo descripcion de la clase Perro, como la clase perro no tiene ese metodo lo busca en la clase Animal
+    echo $perro2->descripcion(); 
+
+    echo "<hr>";
+
+    //Llama al metodo descripcion de la clase Vaca. Como la clase Vaca tiene ese metedo lo utliza
+    //La clase Animal tambien tiene la clase descripcion pero como la clase descripcion tambien esta en Vaca lo sobrescribe
+    echo $vaca1->descripcion(); 

@@ -1,80 +1,23 @@
 <?php
-    namespace clases\herencias;
+    namespace clases\herencia;
 
     class Animal {
-        private string $nombre;
-        private float $peso;
-        private string $color;
+        public string $nombre;
+        public float $peso;
+        public string $color;
 
-        /**
-         * Get the value of nombre
-         *
-         * @return string
-        */
-        public function getNombre(): string {
-            return $this->nombre;
-        }
-
-        /**
-         * Set the value of nombre
-         *
-         * @param string $nombre
-         *
-         * @return self
-        */
-        public function setNombre(string $nombre): self {
-            $this->nombre = $nombre;
-
-            return $this;
-        }
-
-        /**
-         * Get the value of peso
-         *
-         * @return float
-        */
-        public function getPeso(): float {
-            return $this->peso;
-        }
-
-        /**
-         * Set the value of peso
-         *
-         * @param float $peso
-         *
-         * @return self
-         */
-        public function setPeso(float $peso): self {
+        public function __construct(string $nombre = "animal", float $peso = 0, string $color = "sin color") {
+            $this->nombre = strtoupper($nombre);
             $this->peso = $peso;
-
-            return $this;
+            $this->color = $color;
         }
 
         /**
-         * Get the value of color
+         * Una descripción del animal con su nombre, peso y color.
          *
          * @return string
-         */
-        public function getColor(): string {
-            return $this->color;
-        }
-
-        /**
-         * Set the value of color
-         *
-         * @param string $color
-         *
-         * @return self
-         */
-        public function setColor(string $color): self {
-            $this->color = $color;
-
-            return $this;
-        }
-
-        public function __construct(string $nombre = "animal", float $peso = 0, string $color = "Sin Color") {
-            $this->setNombre(strtoupper($nombre));
-            $this->setPeso($peso);
-            $this->setColor($color);
+        */
+        public function descripcion(): string {
+            return "{$this->nombre} tiene {$this->peso} kg y es de color {$this->color}.";
         }
     }

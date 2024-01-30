@@ -1,8 +1,12 @@
 <?php
+    //Opcion 1
     use clases\animales\Animal;
     use clases\animales\Perro;
     use clases\animales\Persona;
     use clases\animales\Vaca;
+
+    //Opcion 2
+    //use clases\animales\{Animal, Perro, Persona, Vaca};
 
     include "autoload.php";
 

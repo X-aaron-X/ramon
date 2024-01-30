@@ -1,59 +1,26 @@
 <?php
-    namespace clases\herencias;
+    namespace clases\herencia;
 
-    class Vaca extends Animal{
-        private string $direccion;
-        private string $granja;
-
-        /**
-         * Get the value of direccion
-         *
-         * @return string
-        */
-        public function getDireccion(): string {
-            return $this->direccion;
-        }
-
-        /**
-         * Set the value of direccion
-         *
-         * @param string $direccion
-         *
-         * @return self
-        */
-        public function setDireccion(string $direccion): self {
-            $this->direccion = $direccion;
-
-            return $this;
-        }
-
-        /**
-         * Get the value of granja
-         *
-         * @return string
-         */
-        public function getGranja(): string {
-            return $this->granja;
-        }
-
-        /**
-         * Set the value of granja
-         *
-         * @param string $granja
-         *
-         * @return self
-        */
-        public function setGranja(string $granja): self {
-            $this->granja = $granja;
-
-            return $this;
-        }
+    class Vaca extends Animal { //La vaca hereda las propiedades de animal
+        public string $direccion;
+        public string $granja;
 
         public function __construct(string $nombre = "", float $peso = 0, string $color = "", string $direccion = "", string $granja = "") {
-            $this->setNombre($nombre);
-            $this->setPeso($peso);
-            $this->setColor($color);
-            $this->setDireccion($direccion);
-            $this->setGranja($granja);
+            $this->nombre = $nombre;
+            $this->peso = $peso;
+            $this->color = $color;
+            $this->direccion = $direccion;
+            $this->granja = $granja;
+        }
+
+        /**
+         * Una descripción del animal con su nombre, peso, color, direccion y la granja.
+         *
+         * @return string
+        */
+        public function descripcion(): string {
+            //LLamo al metodo descricion de Animal
+            return parent::descripcion()."Vive en {$this->direccion} y pertenece a la granja {$this->granja}";
+            //return "{$this->nombre} tiene {$this->peso} kg y es de color {$this->color}. Vive en {$this->direccion} y pertenece a la granja {$this->granja}.";
         }
     }
