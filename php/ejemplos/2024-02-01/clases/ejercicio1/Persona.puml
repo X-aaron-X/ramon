@@ -1,0 +1,12 @@
+@startuml ejercicio1
+
+class Persona{
+    + nombre : string
+    + edad : int
+
+    + Persona(nombre:string,edad:int)
+    + mostrarInformacion() : string
+
+}
+
+@enduml

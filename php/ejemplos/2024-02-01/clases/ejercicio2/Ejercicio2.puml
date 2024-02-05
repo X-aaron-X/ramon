@@ -1,0 +1,31 @@
+@startuml ejercicio2
+class Usuario{
+    + idUsuario : int
+    + nombre : string
+    + email : string
+    + edad : int
+    + activo : bool
+
+    + Usuario()
+    + mostrarInformacion() : string
+    + activarUsuario() : void
+    + cambiarEdad(nuevaEdad:int) : void
+
+}
+
+class Producto{
+    + idProducto : int
+    + nombre : string 
+    + precio : float
+    + stock : int
+    + descripcion : string
+
+    + Producto()
+    + mostrarDetalles() : string
+    + actualizarStock( cantidad: int)  void
+    + calcularPrecioDescuento(porcentajeDescuento : float) : float
+
+}
+
+ 
+@enduml

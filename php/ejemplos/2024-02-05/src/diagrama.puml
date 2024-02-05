@@ -1,0 +1,45 @@
+@startuml ejemplo
+    class Persona{
+        - nombre : string
+        - edad : int
+        
+        + mostrar() : string
+        + Persona()
+        + getEdad() : int
+        + getNombre() : string
+        + setEdad (edad:int) : self
+        + setNombre (nombre:string) : self
+    }
+
+    class Empleado{
+        - sueldo : float
+
+        + Empleado()
+        + mostrar() : string
+        + calcularSueldo(horas:int) : void
+    }
+
+    class Cliente{
+        - nombreEmpresa : string 
+        - telefono :string
+
+        + mostrar() : string
+        + Cliente()
+        + getNombreEmpresa() : string
+        + setNombreEmpresa(nombre:string) : self
+        + getTelefono(): string
+        + setTelefono(telefono:string): self
+    }
+
+    class Directivo{
+        - categoria : string
+        
+        + mostrar() : string
+        + setCategoria(categoria:string): self
+        + getCategoria() : string
+    }
+
+    Persona <|-- Empleado
+    Persona <|-- Cliente
+    Empleado <|-- Directivo
+@enduml

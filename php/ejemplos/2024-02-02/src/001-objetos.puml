@@ -1,0 +1,27 @@
+@startuml ejemplo1
+    class Padre {
+        + nombre : string
+        + apellidos : string
+        + edad : int
+        + nivel : int
+        # altura : int
+        - tipo : string
+
+        + Padre(nombre:string, apellidos:string, edad:int, nivel:int, altura:int, tipo:string)
+        + presentarme(): string
+        + asignar(nombre:string apellidos:string): self
+        + getTipo(): string
+        + setTipo(tipo:string): selft
+    }
+
+    class Hijo {
+        + tipo : string
+        + Hijo(nombre:string, apellidos:string, edad:int, nivel:int, altura:int, tipo:string)
+        + presentarme() : string
+        + asignar(nombre:string apellidos:string): self
+        + getTipo(): string
+        + getTipoPadre(): string
+    }
+
+    Padre <|-- Hijo
+@enduml
