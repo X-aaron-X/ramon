@@ -2,22 +2,34 @@
     namespace src;
 
     class Persona {
-        private string $nombre;
-        private int $edad;
+        private ?string $nombre;
+        private ?int $edad;
+
+        public function __construct() {
+            $this->nombre = null;
+            $this->edad = null;
+        }
+
+        public function __toString(): string {
+            $texto = "Nombre: {$this->nombre} <br>";
+            $texto .= "Edad: {$this->edad} <br>";
+
+            return $texto;
+        }
 
         /**
          * Get the value of nombre
          *
-         * @return string
+         * @return ?string
         */
-        public function getNombre(): string {
+        public function getNombre(): ?string {
             return $this->nombre;
         }
 
         /**
          * Set the value of nombre
          *
-         * @param string $nombre
+         * @param ?string $nombre
          *
          * @return self
         */
@@ -30,34 +42,22 @@
         /**
          * Get the value of edad
          *
-         * @return int
+         * @return ?int
         */
-        public function getEdad(): int {
+        public function getEdad(): ?int  {
             return $this->edad;
         }
 
         /**
          * Set the value of edad
          *
-         * @param int $edad
+         * @param ?int $edad
          *
          * @return self
-        */
+         */
         public function setEdad(int $edad): self {
             $this->edad = $edad;
 
             return $this;
-        }
-
-        public function __construct() {
-            $this->setNombre('');
-            $this->setEdad(0);
-        }
-
-        public function __toString(): string {
-            $texto = "Nombre: {$this->getNombre()} <br>";
-            $texto .= "Edad: {$this->getEdad()} <br>";
-
-            return $texto;
         }
     }

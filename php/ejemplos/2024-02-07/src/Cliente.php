@@ -2,14 +2,28 @@
     namespace src;
 
     class Cliente extends Persona {
-        private ?string $nombreEmpresa;
-        private ?string $telefono;
+        protected ?string $nombreEmpresa;
+        protected ?string $telefono;
+
+        // sobreescribir mostrar
+        public function mostrar(): string {
+            $salida = "<div class=\"row mb-3 col-sm-2\">
+                            <ul class=\"list-group\">
+                                <li class=\"list-group-item list-group-item-action text-center\">Nombre: {$this->getNombre()}</li>
+                                <li class=\"list-group-item list-group-item-action text-center\">Edad: {$this->getEdad()}</li>
+                                <li class=\"list-group-item list-group-item-action text-center\">Telefono: {$this->telefono}</li>
+                                <li class=\"list-group-item list-group-item-action text-center\">Nombre empresa: {$this->nombreEmpresa}</li>
+                            </ul>
+                        </div>";
+            return $salida;
+        }
 
         public function __construct() {
             parent::__construct();
-
-            $this->nombreEmpresa = null;
             $this->telefono = null;
+            $this->nombreEmpresa = null;
+
+            $this->propiedadesAsignacionMasiva = ["nombre", "edad", "telefono", "nombreEmpresa"];
         }
 
         /**
@@ -27,7 +41,7 @@
          * @param ?string $nombreEmpresa
          *
          * @return self
-        */
+         */
         public function setNombreEmpresa(?string $nombreEmpresa): self {
             $this->nombreEmpresa = $nombreEmpresa;
 
@@ -54,14 +68,5 @@
             $this->telefono = $telefono;
 
             return $this;
-        }
-
-        public function __toString(): string {
-            $texto = parent::__toString();
-
-            $texto .= "Nombre de la empresa: {$this->nombreEmpresa} <br>";
-            $texto .= "Teléfono: {$this->telefono} <br>";
-
-            return $texto;
         }
     }

@@ -2,13 +2,16 @@
     class Persona{
         - nombre : string
         - edad : int
+        # propiedadesAsignacionMasiva : array
         
-        + mostrar() : string
         + Persona()
+        + mostrar() : string
+
         + getEdad() : int
         + getNombre() : string
         + setEdad (edad:int) : self
         + setNombre (nombre:string) : self
+        + asignar(datos:array) : self
     }
 
     class Empleado{
@@ -16,16 +19,19 @@
 
         + Empleado()
         + mostrar() : string
+
         + getSueldo() : float
         + calcularSueldo(horas:int) : void
+        + asignar(array datos) : self
     }
 
     class Cliente{
-        - nombreEmpresa : string 
-        - telefono :string
+        # nombreEmpresa : string 
+        # telefono :string
 
-        + mostrar() : string
         + Cliente()
+        + mostrar() : string
+
         + getNombreEmpresa() : string
         + setNombreEmpresa(nombre:string) : self
         + getTelefono(): string
@@ -34,8 +40,9 @@
 
     class Directivo{
         - categoria : string
-        
+
         + mostrar() : string
+
         + setCategoria(categoria:string): self
         + getCategoria() : string
     }

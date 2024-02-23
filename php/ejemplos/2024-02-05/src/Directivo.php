@@ -2,29 +2,29 @@
     namespace src;
 
     class Directivo extends Empleado {
-        private $categoria;
-
-        public function __toString(): string {
-            $texto = parent::__toString();
-
-            $texto .= "Categoría: " . $this->getCategoria();
-
-            return $texto;
-        }
+        private ?string $categoria;
 
         /**
          * Get the value of categoria
         */
-        public function getCategoria(){
+        public function getCategoria(): ?string{
             return $this->categoria;
         }
 
         /**
          * Set the value of categoria
         */
-        public function setCategoria($categoria): self{
+        public function setCategoria(?string $categoria): self{
             $this->categoria = $categoria;
 
             return $this;
+        }
+
+        public function __toString(): string {
+            $texto = parent::__toString();
+
+            $texto .= "Categoría: {$this->categoria}";
+
+            return $texto;
         }
     }
