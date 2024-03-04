@@ -62,16 +62,16 @@
     */
     function menu(string $titulo, array $elementoMenu): string {
         $salida = "
-            <nav class='navbar navbar-expand-lg bg-body-tertiary'>
+            <nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
                 <div class='container-fluid'>
-                    <h1 class='text-center display-4'> {$titulo} </h1>
+                    <h1 class='text-center display-4 text-info'> {$titulo} </h1>
                                         
                     <div class='collapse navbar-collapse'>
-                        <ul class='navbar-nav'>";
+                        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>";
 
                         foreach ($elementoMenu as $indice => $valor) {
                             $salida .= "<li class='nav-item'>
-                                            <a class='nav-link' href='{$valor}'>{$indice}</a>
+                                            <a class='nav-link text-light' href='{$valor}'>{$indice}</a>
                                         </li>";
                         }
         $salida .= "

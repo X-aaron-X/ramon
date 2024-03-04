@@ -47,12 +47,18 @@
                 )";
 
         if ($conexion->query($sql)) {
-            $salida = "<div class='text-center mb-5 text-dark'>
-                            Registro creado correctamente
+            $salida = "<div class='p-4'>
+                            <div class='alert alert-success'>
+                                Mensaje enviado correctamente
+                            </div>
                         </div>";
         }
         else {
-            $salida = "Error al crear el registro: {$conexion->error}";
+            $salida = "<div class='p-4'>
+                            <div class='alert alert-danger'>
+                                Error al crear el registro
+                            </div>
+                        </div>";
         }
     }
     
@@ -83,16 +89,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Mensajes</title>
 </head>
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-    <div class="container">
-        <?= menu($parametros['nombreAlicacion'], $elementoMenu) ?>
+<body>
+    <?= menu($parametros['nombreAlicacion'], $elementoMenu) ?>
 
+    <div class="container">
         <div class="p-5">
             <?php
                 require '_form.php';
             ?>
         
-            <div class="text-center mb-5 text-dark"><br><br>
+            <div class="text-center text-dark my-4">
                 <?= $salida ?>
             </div>
         </div>

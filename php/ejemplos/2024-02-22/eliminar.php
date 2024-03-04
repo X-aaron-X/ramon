@@ -32,14 +32,22 @@
     $sql = "DELETE FROM mensajes WHERE id={$id}";
 
     if ($conexion->query($sql)) {
-        $salida = "Se ha eliminado el registro correctamente";
+        $salida = "<div class='p-2'>
+                        <div class='alert alert-success'>
+                            Se ha eliminado el registro correctamente
+                        </div>
+                    </div>";
 
         $salida .= "<p class='text-center'>
                         <a href='mensajes.php' class='btn btn-warning'>Volver</a>
                     </p>";
     }
     else {
-        $salida = "Error al borrar el registro: {$conexion->error}";
+        $salida = $salida = "<div class='p-2'>
+                                <div class='alert alert-danger'>
+                                    Error al eliminar el registro
+                                </div>
+                            </div>";
     }
     
     $conexion->close();
@@ -56,10 +64,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Borrar Registro <?= $parametros['nombreAlicacion'] ?></title>
 </head>
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-    <div class="container">
-        <?= menu($parametros['nombreAlicacion'], $elementoMenu) ?>
+<body>
+    <?= menu($parametros['nombreAlicacion'], $elementoMenu) ?>
 
+    <div class="container">
         <div class="p-3">
             <div class="p-5">
                 <?= $salida ?>

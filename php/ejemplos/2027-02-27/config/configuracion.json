@@ -1,0 +1,11 @@
+{
+    "titulo": "Mi primera aplicación un poco seria",
+    "autor": "Aaron Terry",
+    "db": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "aplicacionFavoritos",
+        "port": "3307"
+    }
+}
